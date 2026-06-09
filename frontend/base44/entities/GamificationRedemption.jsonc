@@ -1,0 +1,54 @@
+{
+  "name": "GamificationRedemption",
+  "properties": {
+    "approved_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "approved_by": {
+      "type": "string"
+    },
+    "branch_id": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "points_used": {
+      "type": "number"
+    },
+    "prize_id": {
+      "description": "ID do pr\u00eamio",
+      "type": "string"
+    },
+    "prize_name": {
+      "type": "string"
+    },
+    "requested_at": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "reseller_id": {
+      "type": "string"
+    },
+    "reseller_name": {
+      "type": "string"
+    },
+    "status": {
+      "default": "pending",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected",
+        "delivered"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "reseller_id",
+    "prize_id",
+    "points_used"
+  ],
+  "type": "object"
+}

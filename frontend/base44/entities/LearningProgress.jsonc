@@ -1,0 +1,22 @@
+{
+  "name": "LearningProgress",
+  "type": "object",
+  "properties": {
+    "reseller_id": {
+      "type": "string"
+    },
+    "track_id": {
+      "type": "string"
+    },
+    "completed_lesson_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "reseller_id",
+    "track_id"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "name": "ResellerProgressKanban",
+  "properties": {
+    "activity_notes": {
+      "description": "Observa\u00e7\u00f5es da \u00faltima atividade",
+      "type": "string"
+    },
+    "branch_id": {
+      "type": "string"
+    },
+    "column": {
+      "default": "first_cycle",
+      "description": "Coluna atual do kanban",
+      "enum": [
+        "first_cycle",
+        "red_signal",
+        "yellow_signal",
+        "high_performance"
+      ],
+      "type": "string"
+    },
+    "current_bag_id": {
+      "type": "string"
+    },
+    "current_cycle_number": {
+      "default": 1,
+      "type": "number"
+    },
+    "last_activity_date": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "next_activity_date": {
+      "description": "Data da pr\u00f3xima atividade agendada",
+      "format": "date",
+      "type": "string"
+    },
+    "reseller_id": {
+      "type": "string"
+    },
+    "reseller_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "reseller_id",
+    "branch_id"
+  ],
+  "type": "object"
+}

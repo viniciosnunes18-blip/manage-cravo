@@ -1,0 +1,70 @@
+{
+  "name": "Branch",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nome da filial"
+    },
+    "city": {
+      "type": "string",
+      "description": "Cidade"
+    },
+    "state": {
+      "type": "string",
+      "description": "Estado (UF)"
+    },
+    "address": {
+      "type": "string",
+      "description": "Endere\u00e7o completo"
+    },
+    "zip_code": {
+      "type": "string",
+      "description": "CEP"
+    },
+    "manager_name": {
+      "type": "string",
+      "description": "Nome do respons\u00e1vel"
+    },
+    "manager_email": {
+      "type": "string",
+      "description": "E-mail do gestor"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Telefone/WhatsApp"
+    },
+    "whatsapp_link": {
+      "type": "string",
+      "description": "Link do WhatsApp"
+    },
+    "is_headquarters": {
+      "type": "boolean",
+      "default": false,
+      "description": "Se \u00e9 a matriz"
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    },
+    "commission_table": {
+      "type": "string",
+      "enum": [
+        "standard",
+        "special_jf"
+      ],
+      "default": "standard",
+      "description": "Tabela de comiss\u00e3o aplic\u00e1vel"
+    },
+    "default_settlement_days": {
+      "type": "number",
+      "default": 45,
+      "description": "Prazo padr\u00e3o de acerto em dias"
+    }
+  },
+  "required": [
+    "name",
+    "city",
+    "state"
+  ]
+}

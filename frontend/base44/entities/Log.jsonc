@@ -1,0 +1,27 @@
+{
+  "name": "Log",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Tipo do log (ex: usuario_criado, cadastro_aprovado)"
+    },
+    "reseller_id": {
+      "type": "string"
+    },
+    "branch_id": {
+      "type": "string"
+    },
+    "details": {
+      "type": "string",
+      "description": "Detalhes do evento"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "type"
+  ]
+}

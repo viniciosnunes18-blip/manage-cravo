@@ -1,0 +1,100 @@
+{
+  "name": "StockTransfer",
+  "properties": {
+    "approved_at": {
+      "description": "Data e hora da aprova\u00e7\u00e3o",
+      "format": "date-time",
+      "type": "string"
+    },
+    "approved_by": {
+      "description": "Nome de quem aprovou",
+      "type": "string"
+    },
+    "destination_branch_id": {
+      "description": "ID da filial destino",
+      "type": "string"
+    },
+    "destination_branch_name": {
+      "description": "Nome da filial destino",
+      "type": "string"
+    },
+    "notes": {
+      "description": "Observa\u00e7\u00f5es da transfer\u00eancia",
+      "type": "string"
+    },
+    "origin_branch_id": {
+      "description": "ID da filial de origem (null = Matriz)",
+      "type": "string"
+    },
+    "origin_branch_name": {
+      "description": "Nome da filial de origem",
+      "type": "string"
+    },
+    "products": {
+      "description": "Produtos transferidos",
+      "items": {
+        "properties": {
+          "product_code": {
+            "type": "string"
+          },
+          "product_id": {
+            "type": "string"
+          },
+          "product_name": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "unit_price": {
+            "type": "number"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "received_at": {
+      "description": "Data e hora do recebimento confirmado",
+      "format": "date-time",
+      "type": "string"
+    },
+    "received_by": {
+      "description": "Nome de quem confirmou o recebimento",
+      "type": "string"
+    },
+    "status": {
+      "default": "pending",
+      "description": "Status da transfer\u00eancia",
+      "enum": [
+        "pending",
+        "in_transit",
+        "received",
+        "cancelled"
+      ],
+      "type": "string"
+    },
+    "total_items": {
+      "description": "Total de itens transferidos",
+      "type": "number"
+    },
+    "total_value": {
+      "description": "Valor total dos produtos transferidos",
+      "type": "number"
+    },
+    "transfer_date": {
+      "description": "Data da transfer\u00eancia",
+      "format": "date",
+      "type": "string"
+    },
+    "transfer_reason": {
+      "description": "Motivo da transfer\u00eancia",
+      "type": "string"
+    }
+  },
+  "required": [
+    "destination_branch_id",
+    "products"
+  ],
+  "type": "object"
+}

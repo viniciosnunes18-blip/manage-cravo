@@ -1,0 +1,39 @@
+{
+  "name": "Notification",
+  "type": "object",
+  "properties": {
+    "branch_id": {
+      "type": "string",
+      "description": "ID da filial destinat\u00e1ria"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "novo_cadastro",
+        "revendedora_ativada",
+        "cadastro_reprovado"
+      ],
+      "description": "Tipo de notifica\u00e7\u00e3o"
+    },
+    "title": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "reseller_id": {
+      "type": "string",
+      "description": "ID da revendedora relacionada"
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "branch_id",
+    "type",
+    "title",
+    "message"
+  ]
+}

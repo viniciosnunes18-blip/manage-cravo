@@ -1,0 +1,32 @@
+{
+  "name": "GamificationPrize",
+  "properties": {
+    "branch_id": {
+      "description": "Filial que oferece o pr\u00eamio (null = todas)",
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "is_active": {
+      "default": true,
+      "type": "boolean"
+    },
+    "name": {
+      "description": "Ex: maleta, semi joias, R$500 em dinheiro",
+      "type": "string"
+    },
+    "points_required": {
+      "description": "Pontos necess\u00e1rios para resgatar",
+      "type": "number"
+    }
+  },
+  "required": [
+    "name",
+    "points_required"
+  ],
+  "type": "object"
+}

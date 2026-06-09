@@ -1,0 +1,46 @@
+{
+  "name": "GamificationRules",
+  "properties": {
+    "branch_id": {
+      "description": "null = regra global para todas as filiais",
+      "type": "string"
+    },
+    "early_settlement_points": {
+      "default": 20,
+      "description": "Pontos por acerto na data ou antes",
+      "type": "number"
+    },
+    "late_settlement_points": {
+      "default": -20,
+      "description": "Pontos por acerto atrasado (negativo)",
+      "type": "number"
+    },
+    "points_expire_months": {
+      "default": 12,
+      "description": "Meses para os pontos expirarem",
+      "type": "number"
+    },
+    "points_per_amount": {
+      "default": 2,
+      "description": "Pontos ganhos a cada R$20 vendidos",
+      "type": "number"
+    },
+    "points_per_amount_threshold": {
+      "default": 20,
+      "description": "A cada R$ vendidos para ganhar pontos",
+      "type": "number"
+    },
+    "referral_approved_points": {
+      "default": 100,
+      "description": "Pontos por indica\u00e7\u00e3o aprovada",
+      "type": "number"
+    },
+    "referral_points": {
+      "default": 0,
+      "description": "Pontos por indica\u00e7\u00e3o de nova revendedora",
+      "type": "number"
+    }
+  },
+  "type": "object",
+  "required": []
+}

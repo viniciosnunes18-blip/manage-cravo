@@ -1,0 +1,48 @@
+{
+  "name": "MarketingMaterial",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "fotos",
+        "videos",
+        "stories",
+        "posts",
+        "logos",
+        "banners"
+      ],
+      "default": "fotos"
+    },
+    "file_url": {
+      "type": "string"
+    },
+    "preview_url": {
+      "type": "string"
+    },
+    "format": {
+      "type": "string",
+      "description": "ex: JPG, MP4, PNG"
+    },
+    "size": {
+      "type": "string",
+      "description": "ex: 2.4 MB"
+    },
+    "is_new": {
+      "type": "boolean",
+      "default": false
+    },
+    "is_active": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "file_url"
+  ]
+}

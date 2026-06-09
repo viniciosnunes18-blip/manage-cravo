@@ -1,0 +1,56 @@
+{
+  "name": "MessageTemplate",
+  "properties": {
+    "body_email": {
+      "description": "Corpo da mensagem por e-mail",
+      "type": "string"
+    },
+    "body_whatsapp": {
+      "description": "Corpo da mensagem por WhatsApp",
+      "type": "string"
+    },
+    "branch_id": {
+      "description": "null = template global",
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "is_active": {
+      "default": true,
+      "type": "boolean"
+    },
+    "name": {
+      "description": "Ex: Revendedora - Bem-Vinda",
+      "type": "string"
+    },
+    "trigger": {
+      "description": "Gatilho que dispara a mensagem",
+      "enum": [
+        "welcome",
+        "settlement_today",
+        "settlement_2days",
+        "incentive_3days_no_sales",
+        "incentive_10days_no_sales",
+        "incentive_10days_low_sales",
+        "incentive_5days_end_cycle",
+        "consumer_receipt",
+        "warranty",
+        "overdue_consumer"
+      ],
+      "type": "string"
+    },
+    "variables": {
+      "description": "Vari\u00e1veis dispon\u00edveis para uso",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "name",
+    "trigger"
+  ],
+  "type": "object"
+}

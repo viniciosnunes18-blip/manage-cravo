@@ -1,0 +1,29 @@
+{
+  "name": "Testimonial",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nome da revendedora"
+    },
+    "city": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "string",
+      "description": "URL da foto"
+    },
+    "text": {
+      "type": "string",
+      "description": "Depoimento"
+    },
+    "is_featured": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "name",
+    "text"
+  ]
+}
