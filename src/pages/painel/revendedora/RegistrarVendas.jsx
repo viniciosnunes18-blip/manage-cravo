@@ -92,6 +92,13 @@ export default function RegistrarVendas() {
       await base44.entities.Reseller.update(reseller.id, {
         total_sold_period: (reseller.total_sold_period || 0) + soldValue,
       });
+      // Decrementa quantity_in_field: produto saiu de campo (vendido ao consumidor)
+      const productRecords = await base44.entities.Product.filter({ id: selectedProduct.id });
+      if (productRecords[0]) {
+        await base44.entities.Product.update(selectedProduct.id, {
+          quantity_in_field: Math.max(0, (productRecords[0].quantity_in_field || 0) - 1),
+        });
+      }
       queryClient.invalidateQueries();
       toast.success(`✅ Venda de ${selectedProduct.name} registrada!`);
       setSelectedProduct(null);

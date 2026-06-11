@@ -96,10 +96,11 @@ export default function RegistrarAcerto({ bag, branch, onClose, onSuccess }) {
         notes: notes || missingNotes ? `${notes}\n${missingNotes}`.trim() : undefined,
       });
 
-      // Update reseller total sold period
+      // Encerra o ciclo: zera total_sold_period e salva o nível atingido
       if (reseller) {
         await base44.entities.Reseller.update(reseller.id, {
-          total_sold_period: (reseller.total_sold_period || 0) + totalSold,
+          total_sold_period: 0,
+          commission_level: currentLevel.key,
         });
       }
 
